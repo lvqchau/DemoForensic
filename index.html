@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Demo Forensics Tool using OpenCV for Javascript">  
+  <title>Demo Forensics Tool</title>
+  <!-- Icon -->
+  <link rel="shortcut icon" href="./assets/images/framed-picture.png" type="image/x-icon">
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  
+</head>
+<body>
+  <div class="loader"></div>
+
+  <section class="container image__container mb-2">
+    <div class="mb-2">
+      <label class="label__text mb-2" for="imgInput">Image Input</label>
+      <input type="file" id="imgInput" name="imgInput" />  
+    </div>  
+    <a class="btn btn-action" href="#" id="downloadButton">Download Image</a>
+  </section>
+
+  <section class="container functionalities__container mb-2">
+    <div class="mb-2" style="display: flex; align-items: center;">
+      <p class="label__text mr-2">Funtionalities</p>
+      <button id="reloadButton" class="btn btn-none">
+        <img src="./assets/images/reload-512.png" class="ic-refresh"/>
+      </button>
+    </div>
+    <a type="button" id="circlesButton" class="btn btn-clr-1">Circle Detection</a>
+  </section>
+
+  <section class="container canvas__container">
+    <div class="mb-2">
+      <p class="label__text mb-2 label__text-red">Source</p>
+      <div class="image__holder">
+        <div class="frame">
+          <img class="image__view" id="imgSrc" alt="No picture"/>
+        </div>
+      </div>
+    </div>
+    <div class="mb-2">
+      <p class="label__text mb-2 label__text-red">Result</p>
+      <div class="image__holder">
+        <div class="frame">
+          <div style="height: auto; width: 100%">
+            <canvas id="imageCanvas"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>    
+  </section>
+
+
+  
+
+  <script type="text/javascript">
+    document.body.classList.add('loading');
+    function onOpenCvReady() {
+      document.body.classList.remove('loading');
+    }
+  </script>
+  <script async src="./assets/lib/opencv.js" onload="onOpenCvReady();" type="text/javascript"></script>
+  <script src="./assets/js/index.js"></script>
+</body>
+</html>
