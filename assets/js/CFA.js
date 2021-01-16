@@ -29,9 +29,8 @@ function CFA() {
   let delta = 10; //uniform
   let r = new Array(N-1).fill(null);
   let w = new Array(N-1).fill(null);
-  let a = false;
 
-  while(a === false) {
+  while(1) {
     /******* E-STEP *******/
     for (let k = 1; k < N-1; k++) {
       r[k] = g[k] - (alpha[0]*g[k-1] + alpha[1]*g[k+1]);
