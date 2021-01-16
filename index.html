@@ -31,6 +31,8 @@
       </button>
     </div>
     <a type="button" id="circlesButton" class="btn btn-clr-1">Circle Detection</a>
+    <a type="button" id="CFAButton" class="btn btn-clr-1">CFA</a>
+    <a type="button" id="chartButton" class="btn btn-clr-1">Flow chart</a>
   </section>
 
   <section class="container canvas__container">
@@ -55,7 +57,11 @@
   </section>
 
 
-  
+  <section>
+    <div id="flow__chart">
+
+    </div>
+  </section>
 
   <script type="text/javascript">
     document.body.classList.add('loading');
@@ -64,6 +70,17 @@
     }
   </script>
   <script async src="./assets/lib/opencv.js" onload="onOpenCvReady();" type="text/javascript"></script>
+  <!-- Utils -->
+  <script src="./assets/utils/transpose1D.js"></script>
+  <script src="./assets/utils/transpose2D.js"></script>
+  <script src="./assets/utils/multiplyMatrix.js"></script>
+  <script src="./assets/utils/mergeColumnArray.js"></script>
+  <script src="./assets/utils/inv.js"></script>
+  <script src="./assets/utils/diag.js"></script>
+
+  <!-- Functionalities -->
+  <script src="./assets/js/circleDetection.js"></script>
+  <script src="./assets/js/CFA.js"></script>
   <script src="./assets/js/index.js"></script>
 </body>
 </html>
