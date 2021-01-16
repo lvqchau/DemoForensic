@@ -32,7 +32,6 @@ getEle('downloadButton').onclick = function() {
   }
 };
 
-
 getEle('circlesButton').onclick = function() {
   // document.body.classList.add('loading');
 
@@ -45,3 +44,5 @@ getEle('circlesButton').onclick = function() {
 
   // document.body.classList.remove('loading');
 };
+
+getEle('CFAButton').onclick = CFA
